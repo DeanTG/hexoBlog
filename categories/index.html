@@ -90,7 +90,7 @@
 <meta property="og:url" content="https://deantg.github.io/categories/index.html">
 <meta property="og:site_name" content="Dean Blog">
 <meta property="og:description" content="a coder who loves husky">
-<meta property="og:updated_time" content="2016-09-07T14:18:59.000Z">
+<meta property="og:updated_time" content="2016-09-08T02:26:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="categories">
 <meta name="twitter:description" content="a coder who loves husky">
@@ -101,7 +101,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"always"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -120,7 +120,7 @@
   
 
   
-    categories | Dean Blog
+    分类 | Dean Blog
   
 </title>
 </head>
@@ -129,6 +129,15 @@
 
   
 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-83875507-1', 'auto');
+  ga('send', 'pageview');
+</script>
 
 
 
@@ -185,22 +194,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
+            分类
           </a>
         </li>
       
@@ -211,6 +210,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About me
           </a>
         </li>
       
@@ -234,7 +243,14 @@
   <div id="posts" class="posts-expand">
     
     
-      
+      <div class="category-all-page">
+        <div class="category-all-title">
+            目前共计 3 个分类
+        </div>
+        <div class="category-all">
+          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sublime-package/">sublime package</a><span class="category-list-count">1</span></li></ul>
+        </div>
+      </div>
     
   </div>
 
@@ -244,14 +260,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="categories/index.html"
-           data-title="categories" data-url="https://deantg.github.io/categories/index.html">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -282,18 +290,25 @@
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
+            <a href="/">
               <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

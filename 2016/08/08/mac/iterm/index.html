@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="iterm mac," />
+  <meta name="keywords" content="iterm,mac," />
 
 
 
@@ -87,18 +87,7 @@
 <meta name="description" content="安装
 url: iterm2
 
-大致安装过程详见此blog  
-命令行报错
-zsh: command not found
-
-原因：环境变量没有配置,将bash的环境变量添加到zsh  
-zsh中环境变量配置: .zshrc  (bash中环境变量配置：.bash_profile )
-
-打开zsh文件 
-open ~/.zshc
-
-添加bash环境变量
-source ~/.bash_profile">
+大致安装过程详见此blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mac下iterm2安装">
 <meta property="og:url" content="https://deantg.github.io/2016/08/08/mac/iterm/index.html">
@@ -106,36 +95,14 @@ source ~/.bash_profile">
 <meta property="og:description" content="安装
 url: iterm2
 
-大致安装过程详见此blog  
-命令行报错
-zsh: command not found
-
-原因：环境变量没有配置,将bash的环境变量添加到zsh  
-zsh中环境变量配置: .zshrc  (bash中环境变量配置：.bash_profile )
-
-打开zsh文件 
-open ~/.zshc
-
-添加bash环境变量
-source ~/.bash_profile">
-<meta property="og:updated_time" content="2016-08-09T05:26:25.000Z">
+大致安装过程详见此blog">
+<meta property="og:updated_time" content="2016-09-08T03:03:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac下iterm2安装">
 <meta name="twitter:description" content="安装
 url: iterm2
 
-大致安装过程详见此blog  
-命令行报错
-zsh: command not found
-
-原因：环境变量没有配置,将bash的环境变量添加到zsh  
-zsh中环境变量配置: .zshrc  (bash中环境变量配置：.bash_profile )
-
-打开zsh文件 
-open ~/.zshc
-
-添加bash环境变量
-source ~/.bash_profile">
+大致安装过程详见此blog">
 
 
 
@@ -143,7 +110,7 @@ source ~/.bash_profile">
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"always"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -165,6 +132,15 @@ source ~/.bash_profile">
 
   
 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-83875507-1', 'auto');
+  ga('send', 'pageview');
+</script>
 
 
 
@@ -221,22 +197,12 @@ source ~/.bash_profile">
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
+            分类
           </a>
         </li>
       
@@ -247,6 +213,16 @@ source ~/.bash_profile">
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About me
           </a>
         </li>
       
@@ -306,6 +282,25 @@ source ~/.bash_profile">
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/mac/" itemprop="url" rel="index">
+                    <span itemprop="name">mac</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -339,6 +334,7 @@ source ~/.bash_profile">
 <p>url: <a href="http://iterm2.com" target="_blank" rel="external">iterm2</a></p>
 </blockquote>
 <p>大致安装过程详见<a href="https://laoshuterry.gitbooks.io/mac_os_setup_guide/content/4_ZshConfig.html" target="_blank" rel="external">此blog</a>  </p>
+<a id="more"></a>
 <h2 id="命令行报错"><a href="#命令行报错" class="headerlink" title="命令行报错"></a>命令行报错</h2><blockquote>
 <p>zsh: command not found</p>
 </blockquote>
@@ -386,6 +382,22 @@ export EDITOR=&quot;sub
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>pay me a cup of coffee！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="Dean Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -394,7 +406,9 @@ export EDITOR=&quot;sub
       
         <div class="post-tags">
           
-            <a href="/tags/iterm-mac/" rel="tag">#iterm mac</a>
+            <a href="/tags/iterm/" rel="tag">#iterm</a>
+          
+            <a href="/tags/mac/" rel="tag">#mac</a>
           
         </div>
       
@@ -484,18 +498,25 @@ export EDITOR=&quot;sub
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
+            <a href="/">
               <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
