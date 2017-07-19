@@ -84,15 +84,16 @@
 
 
 
-<meta name="description" content="a coder who loves husky">
+<meta name="description" content="First become a programmer, followed by FEer">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dean Blog">
 <meta property="og:url" content="https://deantg.github.io/index.html">
 <meta property="og:site_name" content="Dean Blog">
-<meta property="og:description" content="a coder who loves husky">
+<meta property="og:description" content="First become a programmer, followed by FEer">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dean Blog">
-<meta name="twitter:description" content="a coder who loves husky">
+<meta name="twitter:description" content="First become a programmer, followed by FEer">
 
 
 
@@ -161,7 +162,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">前端开发博客</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -235,6 +236,142 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/18/wx/微信公众号网页开发/" itemprop="url">
+                  微信h5及微信支付
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-18T21:58:47+08:00" content="2017-05-18">
+              2017-05-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/微信/" itemprop="url" rel="index">
+                    <span itemprop="name">微信</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/18/wx/微信公众号网页开发/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/18/wx/微信公众号网页开发/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h2><ul>
+<li>项目名：创合汇慕课。</li>
+<li>概述：具有直播功能的演说慕课网站，包含会员系统，评论系统，笔记，微信支付，微信分享。</li>
+</ul>
+<h2 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h2><p><a href="http://www.baidu.com" target="_blank" rel="external">参考</a></p>
+<ol>
+<li>用户进入公众号，通过授权链接回调进入首页（授权链接只能携带两个参数）。</li>
+<li>授权链接返回的url上带有参数code，通过code参数向后台请求openid。openid是唯一账号的认证。</li>
+<li>登录系统，本地存储登录时间，请求到的过期时间，token,code（用来刷新token），loginType（游客，随便看看用户，注册用户）</li>
+<li>进入到首页的时候判断本地存储的loginType类型，如果是游客，跳转到登陆页，如果是随便看看，直接进首页，如果是注册用户获取本地token。</li>
+<li>token，作为所有非首页展示页面的请求令牌。注册用户获取token，判断token是否存在，不存在跳转登陆页，存在继续判断是否过期，过期跳登陆页。</li>
+</ol>
+<h2 id="JSSDK调用"><a href="#JSSDK调用" class="headerlink" title="JSSDK调用"></a>JSSDK调用</h2><ol>
+<li>首先在页面js最前面加载jweixin.js文件，用于初始化签名参数。（js安全域名）</li>
+<li>获取js签名参数，通过token，openid等参数请求js签名参数，配置wx.config</li>
+<li>通过wx.ready()函数初始化完成之后调用jssdk里的方法。</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -451,9 +588,9 @@
       
         
           <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
-<p>url: <a href="http://iterm2.com">iterm2</a></p>
+<p>url: <a href="http://iterm2.com" target="_blank" rel="external">iterm2</a></p>
 </blockquote>
-<p>大致安装过程详见<a href="https://laoshuterry.gitbooks.io/mac_os_setup_guide/content/4_ZshConfig.html">此blog</a>  </p>
+<p>大致安装过程详见<a href="https://laoshuterry.gitbooks.io/mac_os_setup_guide/content/4_ZshConfig.html" target="_blank" rel="external">此blog</a>  </p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/08/08/mac/iterm/#more" rel="contents">
               阅读全文 &raquo;
@@ -578,7 +715,7 @@
           <blockquote>
 <p>github pages 和hexo使用文档如下：</p>
 </blockquote>
-<p>GitHub Pages Docs: <a href="https://pages.github.com">github pages</a><br>Hexo Docs: <a href="https://hexo.io/zh-cn/docs/">hexo</a>  </p>
+<p>GitHub Pages Docs: <a href="https://pages.github.com" target="_blank" rel="external">github pages</a><br>Hexo Docs: <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo</a>  </p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/08/05/github/github hexo/#more" rel="contents">
               阅读全文 &raquo;
@@ -646,12 +783,12 @@
                src="/images/husky.png"
                alt="Dean" />
           <p class="site-author-name" itemprop="name">Dean</p>
-          <p class="site-description motion-element" itemprop="description">a coder who loves husky</p>
+          <p class="site-description motion-element" itemprop="description">First become a programmer, followed by FEer</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -659,7 +796,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -668,7 +805,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -725,7 +862,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
