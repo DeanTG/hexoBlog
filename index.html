@@ -258,6 +258,142 @@
             
               
                 
+                <a class="post-title-link" href="/2018/02/27/wx/jssdk/" itemprop="url">
+                  微信JSSDK开发
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-02-27T00:00:00+08:00" content="2018-02-27">
+              2018-02-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/微信/" itemprop="url" rel="index">
+                    <span itemprop="name">微信</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/02/27/wx/jssdk/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/27/wx/jssdk/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
+<li>引入jssdk</li>
+<li><p>初始化sdk</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// 首先通过接口请求获取初始化的sdk参数，接口请求的参数包含初始化当前sdk页面的url(url为锚点#前的全部参数，可以使用 location.href.split(&apos;#&apos;)[0] 去签名)</div><div class="line">wx.config(&#123;</div><div class="line">    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</div><div class="line">    appId: res.appId, // 必填，公众号的唯一标识</div><div class="line">    timestamp: res.timestamp, // 必填，生成签名的时间戳</div><div class="line">    nonceStr: res.nonceStr, // 必填，生成签名的随机串</div><div class="line">    signature: res.signature, // 必填，签名，见附录1</div><div class="line">    jsApiList: [&apos;chooseWXPay&apos;] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>在wx.ready()方法中使用jsApiList中的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wx.ready(() =&gt; &#123;&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="JSSDK-invalid-signature签名错误的解决方案"><a href="#JSSDK-invalid-signature签名错误的解决方案" class="headerlink" title="JSSDK invalid signature签名错误的解决方案"></a>JSSDK invalid signature签名错误的解决方案</h2><p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421141115" target="_blank" rel="external">常见错误及解决方法</a></p>
+<ul>
+<li>补充<br><strong> 服务端签名url的接口和调用skd的前端页面必须全部在公众号绑定的安全域名内
+</strong> 微信支付必须指定支付页面的目录</li>
+</ul>
+<h2 id="vue-spa-使用JSSDK"><a href="#vue-spa-使用JSSDK" class="headerlink" title="vue spa 使用JSSDK"></a>vue spa 使用JSSDK</h2><ul>
+<li>我路由使用的是hash模式，由于从公众号进入之后，经过微信oauth2授权之后，回调的地址的url之后会添加code和status等hash参数，spa应用携带hash参数的url去签名会造成invalid signature错误，可以在第一次进入页面，获取到相关参数之后，使用HTML5的history对象的replace方法不刷新页面更改<br>url</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">history.replaceState(&apos;&apos;, &apos;&apos;, location.href.split(&apos;?&apos;)[0])</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/12/07/yeoman/create-your-generator/" itemprop="url">
                   create your generator
                 </a>
@@ -1056,7 +1192,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1073,7 +1209,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1130,7 +1266,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

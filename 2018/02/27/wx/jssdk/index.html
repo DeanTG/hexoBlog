@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="微信h5,微信JSSDK（分享，支付）," />
+  <meta name="keywords" content="微信h5,微信JSSDK,vue SPA JSSDK,JSSDK invalid signature," />
 
 
 
@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="项目背景 项目名：创合汇慕课。 概述：具有直播功能的演说慕课网站，包含会员系统，评论系统，笔记，微信支付，微信分享。  开发流程参考  用户进入公众号，通过授权链接回调进入首页（授权链接只能携带两个参数）。 授权链接返回的url上带有参数code，通过code参数向后台请求openid。openid是唯一账号的认证。 登录系统，本地存储登录时间，请求到的过期时间，token,code（用来刷新to">
-<meta name="keywords" content="微信h5,微信JSSDK（分享，支付）">
+<meta name="description" content="流程 引入jssdk 初始化sdk 123456789// 首先通过接口请求获取初始化的sdk参数，接口请求的参数包含初始化当前sdk页面的url(url为锚点#前的全部参数，可以使用 location.href.split(&amp;apos;#&amp;apos;)[0] 去签名)wx.config(&amp;#123;    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert">
+<meta name="keywords" content="微信h5,微信JSSDK,vue SPA JSSDK,JSSDK invalid signature">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信h5及微信支付">
-<meta property="og:url" content="https://deantg.github.io/2017/05/18/wx/微信公众号网页开发/index.html">
+<meta property="og:title" content="微信JSSDK开发">
+<meta property="og:url" content="https://deantg.github.io/2018/02/27/wx/jssdk/index.html">
 <meta property="og:site_name" content="Dean Blog">
-<meta property="og:description" content="项目背景 项目名：创合汇慕课。 概述：具有直播功能的演说慕课网站，包含会员系统，评论系统，笔记，微信支付，微信分享。  开发流程参考  用户进入公众号，通过授权链接回调进入首页（授权链接只能携带两个参数）。 授权链接返回的url上带有参数code，通过code参数向后台请求openid。openid是唯一账号的认证。 登录系统，本地存储登录时间，请求到的过期时间，token,code（用来刷新to">
+<meta property="og:description" content="流程 引入jssdk 初始化sdk 123456789// 首先通过接口请求获取初始化的sdk参数，接口请求的参数包含初始化当前sdk页面的url(url为锚点#前的全部参数，可以使用 location.href.split(&amp;apos;#&amp;apos;)[0] 去签名)wx.config(&amp;#123;    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-19T02:23:14.000Z">
+<meta property="og:updated_time" content="2018-02-27T08:22:29.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信h5及微信支付">
-<meta name="twitter:description" content="项目背景 项目名：创合汇慕课。 概述：具有直播功能的演说慕课网站，包含会员系统，评论系统，笔记，微信支付，微信分享。  开发流程参考  用户进入公众号，通过授权链接回调进入首页（授权链接只能携带两个参数）。 授权链接返回的url上带有参数code，通过code参数向后台请求openid。openid是唯一账号的认证。 登录系统，本地存储登录时间，请求到的过期时间，token,code（用来刷新to">
+<meta name="twitter:title" content="微信JSSDK开发">
+<meta name="twitter:description" content="流程 引入jssdk 初始化sdk 123456789// 首先通过接口请求获取初始化的sdk参数，接口请求的参数包含初始化当前sdk页面的url(url为锚点#前的全部参数，可以使用 location.href.split(&amp;apos;#&amp;apos;)[0] 去签名)wx.config(&amp;#123;    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert">
 
 
 
@@ -116,9 +116,9 @@
 
 
 
-  <link rel="canonical" href="https://deantg.github.io/2017/05/18/wx/微信公众号网页开发/"/>
+  <link rel="canonical" href="https://deantg.github.io/2018/02/27/wx/jssdk/"/>
 
-  <title> 微信h5及微信支付 | Dean Blog </title>
+  <title> 微信JSSDK开发 | Dean Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -257,7 +257,7 @@
             
             
               
-                微信h5及微信支付
+                微信JSSDK开发
               
             
           </h1>
@@ -269,8 +269,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-18T21:58:47+08:00" content="2017-05-18">
-              2017-05-18
+            <time itemprop="dateCreated" datetime="2018-02-27T00:00:00+08:00" content="2018-02-27">
+              2018-02-27
             </time>
           </span>
 
@@ -299,8 +299,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/05/18/wx/微信公众号网页开发/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/18/wx/微信公众号网页开发/" itemprop="commentsCount"></span>
+                <a href="/2018/02/27/wx/jssdk/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/27/wx/jssdk/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -323,24 +323,24 @@
       
 
       
-        <h2 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h2><ul>
-<li>项目名：创合汇慕课。</li>
-<li>概述：具有直播功能的演说慕课网站，包含会员系统，评论系统，笔记，微信支付，微信分享。</li>
+        <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
+<li>引入jssdk</li>
+<li><p>初始化sdk</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// 首先通过接口请求获取初始化的sdk参数，接口请求的参数包含初始化当前sdk页面的url(url为锚点#前的全部参数，可以使用 location.href.split(&apos;#&apos;)[0] 去签名)</div><div class="line">wx.config(&#123;</div><div class="line">    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</div><div class="line">    appId: res.appId, // 必填，公众号的唯一标识</div><div class="line">    timestamp: res.timestamp, // 必填，生成签名的时间戳</div><div class="line">    nonceStr: res.nonceStr, // 必填，生成签名的随机串</div><div class="line">    signature: res.signature, // 必填，签名，见附录1</div><div class="line">    jsApiList: [&apos;chooseWXPay&apos;] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>在wx.ready()方法中使用jsApiList中的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wx.ready(() =&gt; &#123;&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="JSSDK-invalid-signature签名错误的解决方案"><a href="#JSSDK-invalid-signature签名错误的解决方案" class="headerlink" title="JSSDK invalid signature签名错误的解决方案"></a>JSSDK invalid signature签名错误的解决方案</h2><p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421141115" target="_blank" rel="external">常见错误及解决方法</a></p>
+<ul>
+<li>补充<br><strong> 服务端签名url的接口和调用skd的前端页面必须全部在公众号绑定的安全域名内
+</strong> 微信支付必须指定支付页面的目录</li>
 </ul>
-<h2 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h2><p><a href="http://www.baidu.com" target="_blank" rel="external">参考</a></p>
-<ol>
-<li>用户进入公众号，通过授权链接回调进入首页（授权链接只能携带两个参数）。</li>
-<li>授权链接返回的url上带有参数code，通过code参数向后台请求openid。openid是唯一账号的认证。</li>
-<li>登录系统，本地存储登录时间，请求到的过期时间，token,code（用来刷新token），loginType（游客，随便看看用户，注册用户）</li>
-<li>进入到首页的时候判断本地存储的loginType类型，如果是游客，跳转到登陆页，如果是随便看看，直接进首页，如果是注册用户获取本地token。</li>
-<li>token，作为所有非首页展示页面的请求令牌。注册用户获取token，判断token是否存在，不存在跳转登陆页，存在继续判断是否过期，过期跳登陆页。</li>
-</ol>
-<h2 id="JSSDK调用"><a href="#JSSDK调用" class="headerlink" title="JSSDK调用"></a>JSSDK调用</h2><ol>
-<li>首先在页面js最前面加载jweixin.js文件，用于初始化签名参数。（js安全域名）</li>
-<li>获取js签名参数，通过token，openid等参数请求js签名参数，配置wx.config</li>
-<li>通过wx.ready()函数初始化完成之后调用jssdk里的方法。</li>
-</ol>
-
+<h2 id="vue-spa-使用JSSDK"><a href="#vue-spa-使用JSSDK" class="headerlink" title="vue spa 使用JSSDK"></a>vue spa 使用JSSDK</h2><ul>
+<li>我路由使用的是hash模式，由于从公众号进入之后，经过微信oauth2授权之后，回调的地址的url之后会添加code和status等hash参数，spa应用携带hash参数的url去签名会造成invalid signature错误，可以在第一次进入页面，获取到相关参数之后，使用HTML5的history对象的replace方法不刷新页面更改<br>url</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">history.replaceState(&apos;&apos;, &apos;&apos;, location.href.split(&apos;?&apos;)[0])</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -380,7 +380,11 @@
           
             <a href="/tags/微信h5/" rel="tag">#微信h5</a>
           
-            <a href="/tags/微信JSSDK（分享，支付）/" rel="tag">#微信JSSDK（分享，支付）</a>
+            <a href="/tags/微信JSSDK/" rel="tag">#微信JSSDK</a>
+          
+            <a href="/tags/vue-SPA-JSSDK/" rel="tag">#vue SPA JSSDK</a>
+          
+            <a href="/tags/JSSDK-invalid-signature/" rel="tag">#JSSDK invalid signature</a>
           
         </div>
       
@@ -389,17 +393,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/06/less/" rel="next" title="sublime下安装less2css出现lessc is not available">
-                <i class="fa fa-chevron-left"></i> sublime下安装less2css出现lessc is not available
+              <a href="/2017/12/07/yeoman/create-your-generator/" rel="next" title="create your generator">
+                <i class="fa fa-chevron-left"></i> create your generator
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/10/node/nvm-npm/" rel="prev" title="nvm使用及npm配置">
-                nvm使用及npm配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -425,8 +425,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/18/wx/微信公众号网页开发/"
-           data-title="微信h5及微信支付" data-url="https://deantg.github.io/2017/05/18/wx/微信公众号网页开发/">
+      <div class="ds-thread" data-thread-key="2018/02/27/wx/jssdk/"
+           data-title="微信JSSDK开发" data-url="https://deantg.github.io/2018/02/27/wx/jssdk/">
       </div>
     
   </div>
@@ -537,7 +537,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目背景"><span class="nav-number">1.</span> <span class="nav-text">项目背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发流程"><span class="nav-number">2.</span> <span class="nav-text">开发流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSSDK调用"><span class="nav-number">3.</span> <span class="nav-text">JSSDK调用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#流程"><span class="nav-number">1.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSSDK-invalid-signature签名错误的解决方案"><span class="nav-number">2.</span> <span class="nav-text">JSSDK invalid signature签名错误的解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-spa-使用JSSDK"><span class="nav-number">3.</span> <span class="nav-text">vue spa 使用JSSDK</span></a></li></ol></div>
             
           </div>
         </section>
